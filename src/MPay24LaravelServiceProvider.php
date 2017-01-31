@@ -42,7 +42,7 @@ class MPay24LaravelServiceProvider extends ServiceProvider
 		$config->setFlexLinkPassword(env('MPAY24_FLEX_LINK_PASSWORD', ''));
 		$config->useFlexLinkTestSystem(env('MPAY24_FLEX_LINK_TEST_SYSTEM', true));
 
-		$config->setLogPath(env('MPAY24_LOG_PATH', serice_path('logs')));
+		$config->setLogPath(env('MPAY24_LOG_PATH', service_path('logs')));
 		$config->setLogFile(env('MPAY24_LOG_FILE', 'mpay24.log'));
 
 		$config->setEnableCurlLog(env('MPAY24_ENABLE_CURL_LOG', false));
