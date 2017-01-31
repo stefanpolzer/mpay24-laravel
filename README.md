@@ -45,4 +45,4 @@ Now you can call `app()->mpay24` or using the `MPay24` Facade which provides you
 All settings that you provided in the `.env` are already set
 
 If you want to change settings during runtime `app()->mpay24config` will provide you the configuration instance.
-For all available available see the PHP SDK [Wiki](https://github.com/mpay24/mpay24-php/wiki/Configuring-the-php-sdk).
+For all available settings see the PHP SDK [Wiki](https://github.com/mpay24/mpay24-php/wiki/Configuring-the-php-sdk).

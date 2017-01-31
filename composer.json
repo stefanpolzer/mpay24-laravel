@@ -1,5 +1,5 @@
 {
-  "name": "mpay24/mpay24-laravel",
+  "name": "stefanpolzer/mpay24-laravel",
   "version": "1.0.0",
   "autoload": {
     "psr-4": {
