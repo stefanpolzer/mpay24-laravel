@@ -41,8 +41,8 @@ MPAY24_CURL_LOG_FILE="curl.log"     // name of the logfile default is mpay24_cur
 
 ## Usage
 
-Now you can call `app()->mpay24` which provides you a object of the `\mPay24\MPAY24` class.
+Now you can call `app()->mpay24` or using the `MPay24` Facade which provides you a instance of the `\mPay24\MPAY24` class.
 All settings that you provided in the `.env` are already set
 
-If you want to change settings during runtime `app()->mpay24config` will provide you the configuration object. 
+If you want to change settings during runtime `app()->mpay24config` will provide you the configuration instance.
 For all available available see the PHP SDK [Wiki](https://github.com/mpay24/mpay24-php/wiki/Configuring-the-php-sdk).
