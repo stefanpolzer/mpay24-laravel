@@ -1,10 +1,10 @@
 <?php
 
-namespace MPay24Laravel;
+namespace Mpay24Laravel;
 
 use Illuminate\Support\ServiceProvider;
-use mPay24\MPAY24;
-use mPay24\MPay24Config;
+use Mpay24\Mpay24;
+use Mpay24\Mpay24Config;
 
 /**
  * Class MPay24LaravelServiceProvider
@@ -13,18 +13,18 @@ use mPay24\MPay24Config;
  * @filesource MPay24LaravelServiceProvider.php
  * @license    MIT
  */
-class MPay24LaravelServiceProvider extends ServiceProvider
+class Mpay24LaravelServiceProvider extends ServiceProvider
 {
 	/**
 	 * Configuration Variable
 	 *
-	 * @var MPay24Config
+	 * @var Mpay24Config
 	 */
 	protected $mpay24Config;
 
 	public function __construct($app)
 	{
-		$config = new MPay24Config();
+		$config = new Mpay24Config();
 
 		$config->setMerchantID(env('MPAY24_MERCHANT_ID', 9000));
 		$config->setSoapPassword(env('MPAY24_SOAP_PASSWORD', ''));
@@ -38,7 +38,7 @@ class MPay24LaravelServiceProvider extends ServiceProvider
 
 		$config->setVerifyPeer(env('MPAY24_VERIFY_PEER', true));
 
-		$config->setSPID(env('MPAY24_SPID'), '');
+		$config->setSpid(env('MPAY24_SPID'), '');
 		$config->setFlexLinkPassword(env('MPAY24_FLEX_LINK_PASSWORD', ''));
 		$config->useFlexLinkTestSystem(env('MPAY24_FLEX_LINK_TEST_SYSTEM', true));
 
@@ -62,7 +62,7 @@ class MPay24LaravelServiceProvider extends ServiceProvider
 	{
 		$this->app->singleton('mpay24', function ()
 		{
-			return new MPAY24($this->mpay24Config);
+			return new Mpay24($this->mpay24Config);
 		});
 
 		$this->app->singleton('mpay24config', function ()
