@@ -7,10 +7,10 @@ use Mpay24\Mpay24;
 use Mpay24\Mpay24Config;
 
 /**
- * Class MPay24LaravelServiceProvider
+ * Class Mpay24LaravelServiceProvider
  *
  * @author     Stefan Polzer <develop@posit.at>
- * @filesource MPay24LaravelServiceProvider.php
+ * @filesource Mpay24LaravelServiceProvider.php
  * @license    MIT
  */
 class Mpay24LaravelServiceProvider extends ServiceProvider
