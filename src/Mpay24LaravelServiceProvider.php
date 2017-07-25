@@ -26,7 +26,7 @@ class Mpay24LaravelServiceProvider extends ServiceProvider
 	{
 		$config = new Mpay24Config();
 
-		$config->setMerchantID(env('MPAY24_MERCHANT_ID', 9000));
+		$config->setMerchantID(env('MPAY24_MERCHANT_ID', 90000));
 		$config->setSoapPassword(env('MPAY24_SOAP_PASSWORD', ''));
 		$config->useTestSystem(env('MPAY24_TEST_SYSTEM', true));
 		$config->setDebug(env('MPAY24_DEBUG', true));
