@@ -5,6 +5,7 @@ namespace Mpay24Laravel;
 use Illuminate\Support\ServiceProvider;
 use Mpay24\Mpay24;
 use Mpay24\Mpay24Config;
+use Mpay24\Mpay24Order;
 
 /**
  * Class Mpay24LaravelServiceProvider
@@ -70,6 +71,10 @@ class Mpay24LaravelServiceProvider extends ServiceProvider
 			return $this->mpay24Config;
 		});
 
+		$this->app->bind('mpay24order', function ()
+		{
+			return new Mpay24Order();
+		});
 	}
 
 	/**
@@ -79,6 +84,6 @@ class Mpay24LaravelServiceProvider extends ServiceProvider
 	 */
 	public function provides()
 	{
-		return ['mpay24', 'mpay24config'];
+		return ['mpay24', 'mpay24config', 'mpay24order'];
 	}
 }

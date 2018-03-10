@@ -41,7 +41,8 @@ MPAY24_CURL_LOG_FILE="curl.log"     // name of the logfile default is mpay24_cur
 
 ## Usage
 
-Now you can call `app()->mpay24` which provides you a instance of the `\mPay24\MPAY24` class.
+Now you can call `app()->mpay24` which provides you a instance of the `\Mpay24\Mpay24` class.
+If you need the a instance of the `\Mpay24\Mpay24Order` class you can get one with `app()->mpay24order`
 All settings that you provided in the `.env` are already set
 
 If you want to change settings during runtime `app()->mpay24config` will provide you the configuration instance.
